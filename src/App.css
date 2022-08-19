@@ -1,38 +1,89 @@
-.App {
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@font-face {
+  font-family: Font1;
+  src: url(MULI-BOLD.TTF);
+}
+
+@font-face {
+  font-family: Font2;
+  src: url(MULI-SEMIBOLD.TTF);
+}
+
+@font-face {
+  font-family: Font3;
+  src: url(MULI-EXTRALIGHT.TTF);
+}
+
+body{
+  color: rgba(72, 140, 143, 1);
+}
+
+.Title{
+  font-size: 48px;
   text-align: center;
+  line-height: 40px;
+  font-family: Font1;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Subtitle{
+  text-align: center;
+  font-size: 24px;
+  /* line-height: 10px; */
+  font-family: Font2;
+  margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FeatureContainer{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  background: #E6F1ED;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.FeatureHeading{
+  font-size: 48px;
+  padding-top: 80px;
+  font-family: Font1;
 }
 
-.App-link {
-  color: #61dafb;
+.FeatureDesc{
+  font-size: 28px;
+  width: 56%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  font-family: Font3;
+  line-height: 39.62px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nextArrow{
+  font-size: 80px;
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  z-index: 2;
+}
+
+.prevArrow{
+  font-size: 80px;
+  position: absolute;
+  top: 40%;
+  left: 1%;
+  z-index: 2;
+}
+
+.arrow:hover{
+  color: rgba(0, 30, 108, 1)
+}
+
+.slick-dots li button:before {
+  color: #FFAC00;
+}
+
+.slick-dots li.slick-active button:before {
+  color:#488C8F !important;
 }
