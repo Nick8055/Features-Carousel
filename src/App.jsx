@@ -2,14 +2,18 @@ import './App.css';
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 import React from "react";
 import Slider from "react-slick";
+import pic1 from './Frame.png';
+import pic2 from './Frame-1.png';
+import pic3 from './Frame-2.png';
+// import {FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 
 export default function SimpleSlider() {
 
   const NextArrow = ({onClick}) => {
     return(
       <div className='arrow nextArrow' onClick={onClick}>
-        {'>'}
-        {/* <FaArrowRight/> */}
+        {/* {'>'} */}
+         <FaArrowRight/> 
       </div>
     )
   }
@@ -17,17 +21,21 @@ export default function SimpleSlider() {
   const PrevArrow = ({onClick}) => {
     return(
       <div className='arrow prevArrow' onClick={onClick}>
-        {'<'}
-        {/* <FaArrowLeft/> */}
+        {/* {'<'} */}
+       <FaArrowLeft/> 
       </div>
     )
   }
 
-  const Feature = ({Heading, Desc}) =>{
+  const Feature = ({Heading, Desc, Image}) =>{
     return(
       <div className='FeatureContainer'>
-        <h1 className="FeatureHeading">{Heading}</h1>
-        <h1 className='FeatureDesc'>{Desc}</h1>
+        <div className='FeatureHeadingAndDesc'>
+          <h1 className="FeatureHeading">{Heading}</h1>
+          <h1 className='FeatureDesc'>{Desc}</h1>
+        </div>
+        <img className="FeatureImage" src={Image}/>
+
       </div>
     )
   }
@@ -45,25 +53,28 @@ export default function SimpleSlider() {
   };
   return (
     <div className='App'>
-      <h1 className='Title'>Features and Services</h1>
-      <h1 className='Subtitle'>Stretch your time | Plan your Day | Join the Green Side</h1>
+      <h1 className='Title'>Lifestyle Page</h1>
+      {/* <h1 className='Subtitle'>Stretch your time | Plan your Day | Join the Green Side</h1> */}
 
       <Slider className='Slider' {...settings}>
 
         <Feature
         Heading={'Plan your day anywhere, anytime.'}
-        Desc={'Managing your clinic remotely has never been easier. Our cloud based system will give you the flexibility to manage your organization and take informed decisions on the move. Sit back, sip your coffee while you run your office.'}
+        Desc={'Managing your clinic remotely has never been easier. Our cloud based system will give you the flexibility to manage your organization and take informed decisions on the move.'}
+        Image={pic1}
         />
 
         <Feature 
-        Heading={'Sleep on our Couch and be lazy for the rest of your life'}
-        Desc={'Why bother working? Try out our latest couches with electronic adjustment for lumbar support, thigh support, and hot-stone massage functionality with spot heaters. Also features stuff like heated seats, ventilated seats, etc.'}
+        Heading={'Join The Green Side'}
+        Desc={'Going green at the workplace is not just great for the planet, but for the business too. By going paper-free, you can save time, space & money while caring for our planet. Send reports such as prescriptions, clinical procedures and bills, directly from the Hypha app to the patients and eliminate the need for paper.'}
+        Image={pic2}
         />
 
         <Feature 
-        Heading={'Stay Safe with Our best-in-class Burglar Exterminator'}
-        Desc={'Features a 500 Magnum Shot gun aimed right at the door entrance from inside, and fires automatically at the burglar when they intrude.'}
-        />
+        Heading={'Stretch your Time'}
+        Desc={'Get more things done within your limited time, do more business every day..By automating your mundane and tedious tasks, Hypha brings convenience at your fingertips. Use your time to grow your business. Find more time for your loved ones.'}
+        Image={pic3}
+       />
 
       </Slider>
     </div>

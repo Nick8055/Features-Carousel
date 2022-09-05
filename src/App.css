@@ -20,12 +20,21 @@ body{
   color: rgba(72, 140, 143, 1);
 }
 
+.App{
+  height: auto;
+}
+
+.Slider{
+  height: auto;
+}
+
 .Title{
   font-size: 48px;
   text-align: center;
   line-height: 40px;
   font-family: Font1;
   margin-top: 50px;
+  color : #04ADBF;
 }
 
 .Subtitle{
@@ -38,42 +47,68 @@ body{
 
 .FeatureContainer{
   width: 90%;
-  text-align: center;
-  margin: 0 auto;
+  text-align: left;
+  margin: auto auto;
   background: #E6F1ED;
+  display: flex;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  height: auto;
 }
 
+
+ .FeatureHeadingAndDesc{
+  width: 55%;
+  padding-left: 40px;
+} 
+
 .FeatureHeading{
-  font-size: 48px;
+  font-size: 40px;
   padding-top: 80px;
   font-family: Font1;
+  color: #0999A8;
+  /* margin-left : 22%; */
 }
 
 .FeatureDesc{
-  font-size: 28px;
-  width: 56%;
-  margin: 0 auto;
+  font-size: 20px;
+  width: 80%;
+   /* margin: 0 auto;   */
   padding-bottom: 80px;
-  padding-top: 50px;
+  padding-top: 30px;
   font-family: Font3;
   line-height: 39.62px;
+  color: #0999A8;
 }
 
+.FeatureImage{
+  width: 40%;
+  /* height: 95%; */
+  margin: auto 0;
+  /* border-style: solid; */
+}
+
+.arrow{
+  /* background-color: white; */
+  border-radius: 20px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  padding-top: 10px;
+}
 
 .nextArrow{
-  font-size: 80px;
-  position: absolute;
-  top: 40%;
-  right: 1%;
-  z-index: 2;
+  font-size: 30px;
+  /* position: absolute; */
+  top: 95%;
+  right: 40%;
 }
 
 .prevArrow{
-  font-size: 80px;
-  position: absolute;
-  top: 40%;
-  left: 1%;
-  z-index: 2;
+  font-size: 30px;
+  /* position: absolute; */
+  top: 95%;
+  left: 40%;
 }
 
 .arrow:hover{
@@ -86,4 +121,55 @@ body{
 
 .slick-dots li.slick-active button:before {
   color:#488C8F !important;
+}
+
+.slick-dots{
+  top: 97%;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .FeatureContainer{
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .FeatureHeading{
+    padding-top: 20px;
+  }
+
+  .FeatureDesc{
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .FeatureHeadingAndDesc{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .FeatureImage{
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .nextArrow{
+    font-size: 30px;
+    top: 97%;
+    right: 30%;
+    background-color: white;
+  }
+
+  .prevArrow{
+    font-size: 30px;
+    top: 97%;
+    left: 30%;
+    background-color: white;
+  }
+
+  .slick-dots{
+    top: 98%;
+  }
 }
